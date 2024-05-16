@@ -1,0 +1,60 @@
+:root {
+  /* breakpoints */
+  --mobile-breakpoint: 480px;
+  --tablet-breakpoint: 768px;
+  --desktop-breakpoint: 1024px;
+  --large-desktop-breakpoint: 1200px;
+
+  /* colors */
+  --primary: #190019;
+  --secondary: #2b124c;
+  --tertiary: #522b58;
+  --quaternary: #854f60;
+  --quinary: #dfb6b2;
+  --senary: #fbe4d8;
+
+  /* HEADER HEIGHT */
+  --header-height: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--senary);
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4rem;
+}
+
+h3,
+h4 {
+  font-weight: bold;
+}
+
+h3 {
+  font-size: x-large;
+}
+
+h4 {
+  font-size: large;
+}
+
+img {
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (max-width: 480px) {
+  h3 {
+    font-size: large;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}

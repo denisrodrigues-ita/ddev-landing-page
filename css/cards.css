@@ -1,0 +1,68 @@
+.cards {
+  background-image: url("/assets/svg/wave-haikei.svg");
+  background-size: cover;
+  background-position: bottom;
+
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--senary);
+  border-radius: 8px;
+  padding: 0.8rem;
+  width: 320px;
+  box-shadow: 1px 1px 4px var(--senary);
+}
+
+.card:hover {
+  box-shadow: 1px 1px 8px var(--senary);
+  scale: 1.02;
+  transition: all 0.3s ease;
+}
+
+.card p {
+  font-size: large;
+  text-align: center;
+}
+
+.card__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards > div {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 280px;
+  }
+
+  .card p {
+    font-size: medium;
+  }
+}

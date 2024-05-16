@@ -1,0 +1,153 @@
+header {
+  background-image: url("../assets/svg/header-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  border-bottom: var(--tertiary) 1px solid;
+}
+
+.header__svg {
+  width: 200px;
+  height: 100px;
+}
+
+.nav__items {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
+}
+
+.nav__items button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav__links > li > a {
+  padding: 1.2rem;
+  border-radius: 8px;
+}
+
+.text-neon {
+  transition: text-shadow 0.3s ease;
+}
+
+.text-neon:hover {
+  color: #fff;
+  text-shadow: 0 0 12px var(--quinary), 0 0 24px var(--quinary),
+    0 0 32px var(--quinary), 0 0 40px var(--quinary);
+}
+
+.toggle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav__links {
+    gap: 0;
+    display: none;
+  }
+
+  .nav__links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: var(--primary);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: var(--tertiary);
+  }
+
+  .nav__links.active > li {
+    border-radius: 0;
+    border-width: 100%;
+    border-bottom: 1px solid var(--senary);
+    width: 100%;
+    text-align: end;
+  }
+
+  .nav__links.active > li > a {
+    padding: 1.2rem;
+    display: block;
+  }
+
+  .nav__links.active > li:hover {
+    background-color: var(--primary);
+  }
+
+  .toggle-menu {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background-image: url("../assets/svg/header-tablet.svg");
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    background-image: url("../assets/svg/header-mobile.svg");
+  }
+}
+
+.toggle-menu {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  display: block;
+  background-color: var(--quinary);
+  height: 3px;
+  width: 30px;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:before {
+  top: -10px;
+}
+
+.hamburger:after {
+  bottom: -10px;
+}
+
+.toggle-menu.active .hamburger {
+  transform: rotate(45deg);
+}
+
+.toggle-menu.active .hamburger:before {
+  transform: translateY(10px) rotate(90deg);
+}
+
+.toggle-menu.active .hamburger:after {
+  transform: translateY(-10px) rotate(90deg);
+}

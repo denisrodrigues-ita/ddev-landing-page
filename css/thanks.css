@@ -1,0 +1,45 @@
+.thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primary),
+    var(--secondary)
+  );
+}
+
+.thanks h1 {
+  font-size: 2.4rem;
+}
+
+.thanks p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.thanks a {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: var(--tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  border: 1px solid var(--quaternary);
+}
+
+.thanks a:hover {
+  scale: 1.04;
+}
+
+.loading-container p {
+  font-size: 1.2rem;
+}
+
+#countdown {
+  font-weight: bold;
+  color: #ff6600;
+}

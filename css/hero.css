@@ -1,0 +1,56 @@
+.hero {
+  background-image: url("../assets/svg/wave-haikei2.svg");
+  background-size: cover;
+  background-position: bottom;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  line-height: 2rem;
+}
+
+.hero__title {
+  font-size: 2.8rem;
+  font-weight: bolder;
+  text-shadow: 0 0 12px var(--quinary), 0 0 16px var(--quinary);
+  margin-bottom: 1.8rem;
+}
+
+.hero__text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(to right, var(--senary), var(--quinary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.hero__img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 8px var(--quinary));
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    margin-top: 4rem;
+    flex-direction: column;
+  }
+}
