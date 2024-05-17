@@ -4,12 +4,12 @@ header {
   background-position: center;
   height: var(--header-height);
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+  max-width: 100vw;
   width: 100%;
   border-bottom: var(--tertiary) 1px solid;
 }
@@ -25,6 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1.2rem;
+  width: 100%;
 }
 
 .nav__items button {
@@ -101,18 +102,6 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    background-image: url("../assets/svg/header-tablet.svg");
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header {
-    background-image: url("../assets/svg/header-mobile.svg");
-  }
-}
-
 .toggle-menu {
   width: 40px;
   height: 40px;
@@ -150,4 +139,21 @@ header {
 
 .toggle-menu.active .hamburger:after {
   transform: translateY(-10px) rotate(90deg);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background-image: url("../assets/svg/header-tablet.svg");
+  }
+
+  .header__svg {
+    width: 120px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    background-image: url("../assets/svg/header-mobile.svg");
+  }
 }
