@@ -20,3 +20,12 @@
 .whatsapp:hover {
   scale: 1.1;
 }
+
+@media screen and (max-width: 480px) {
+  .whatsapp {
+    bottom: 10px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+  }
+}
