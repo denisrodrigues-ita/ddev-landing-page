@@ -15,6 +15,7 @@
   font-weight: bolder;
   text-shadow: 0 0 12px var(--quinary), 0 0 16px var(--quinary);
   margin-bottom: 1.8rem;
+  line-height: 2.4rem;
 }
 
 .hero__text {
@@ -58,5 +59,7 @@
 @media screen and (max-width: 480px) {
   .hero {
     min-height: calc(100vh + var(--header-height));
+    padding: 0 1rem;
+    gap: 2rem;
   }
 }
